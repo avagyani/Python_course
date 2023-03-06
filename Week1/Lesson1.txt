@@ -1,4 +1,7 @@
 1. What is a programming language?
 2. What is Python and what is its ideology?
-3. Our course structure and final result.
-4. Building a work enviroment, setup Python and VS Code.
+3. Two modes of Python (iPython and Python Scripts).
+4. Zen of Python.
+5. Installing Python and VS Code.
+6. Our course structure and final result.
+7. Building a work enviroment, setup Python and VS Code.
