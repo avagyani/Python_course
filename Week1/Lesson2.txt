@@ -1,0 +1,3 @@
+1. Introduction to VS Code(Coding Editor, Terminal Output, Folder Structure).
+2. VS Code Extentions (Andromeda, Python, File Utils, Code Runner).
+3. Interpreter vs Compiler programming languages. How they work.
