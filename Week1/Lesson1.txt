@@ -1,0 +1,4 @@
+1. What is a programming language?
+2. What is Python and what is its ideology?
+3. Our course structure and final result.
+4. Building a work enviroment, setup Python and VS Code.
