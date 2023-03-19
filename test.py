@@ -5,12 +5,19 @@
 
 
 
-birth_year = int(input("Please enter your birth year > "))
+# birth_year = int(input("Please enter your birth year > "))
 
-age_by_years = 2023 - birth_year
+# age_by_years = 2023 - birth_year
 
-leap_years = (birth_year % 4 == 0) + age_by_years // 4
+# leap_years = (birth_year % 4 == 0) + age_by_years // 4
 
-age_by_days = age_by_years * 365 + leap_years
+# age_by_days = age_by_years * 365 + leap_years
 
-print(age_by_days)
+# print(age_by_days)
+
+
+
+year = int(input("Enter your birth year"))
+age = 2023 - year
+result = ((20 <= age <= 30) * "enjoy") + ((30 < age <= 40) * "too late") + ((age < 20 or age > 40) * "try again")
+print(result)
