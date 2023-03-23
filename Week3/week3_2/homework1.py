@@ -9,7 +9,7 @@ Examples
 'Mubashir' ➞ 'Hello, my Love!'"""
 
 
-
-name = input ("Please type your name here -> ")
-result = "Hello, " + ((name * (name !="Mubashir")) or ("my Love" * (name == "Mubashir"))) + "!"
+name = input("Please type your name here -> ")
+result = "Hello, " + ((name * (name != "Mubashir"))
+                      or ("my Love" * (name == "Mubashir"))) + "!"
 print(result)

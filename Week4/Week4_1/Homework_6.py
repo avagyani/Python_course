@@ -28,10 +28,13 @@ Examples
 # else:
 #     print("False")
 
-a = "1 < 2 < 6 < 9 > 3"
+# a = "1 < 2 < 6 < 9 > 3"
 
-a = a.split()
+# a = a.split()
 
-result = eval(f"{a[0]} {a[1]} {a[2]} {a[3]} {a[4]}  {a[5]} {a[6]} {a[7]} {a[8]}")
+# result = eval(f"{a[0]} {a[1]} {a[2]} {a[3]} {a[4]}  {a[5]} {a[6]} {a[7]} {a[8]}")
 
-print(result)
+# print(result)
+
+a = input("a = ")
+print(eval(a))

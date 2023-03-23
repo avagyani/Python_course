@@ -7,7 +7,6 @@ a,b = 1, 9 ➞ True
 """
 
 
-
 a = int(input("Please, enter 'a' -> "))
 b = int(input("Please, enter 'b' -> "))
 
