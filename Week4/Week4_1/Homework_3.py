@@ -9,4 +9,4 @@ Examples
 
 argument = input("Enter your text here ->")
 
-print("something", argument)    # by default sep = " "
+print("something" + " "+ argument, sep = " ")
