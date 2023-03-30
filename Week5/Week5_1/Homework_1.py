@@ -9,13 +9,27 @@ Examples
 
 
 # version_1
-# lst = [20, 15, 26, 8, 4]
-# lst_1= lst[:4]
-# lst_2 = lst[4:]
-# lst_2.extend(lst_1)
-# print(lst_2)
+lst = [20, 15, 26, 8, 4]
+lst_1= lst[:4]
+lst_2 = lst[4:]
+lst_2.extend(lst_1)
+print(lst_2)
 
+
+# version_2
 lst = [20, 15, 26, 8, 4]
 a = lst.pop(4)
 lst.insert(0, a)
 print(lst)
+
+
+# version_3
+lst = [20, 15, 26, 8, 4]
+lst.insert(0, lst.pop())
+print(lst)
+
+
+# version_4
+lst = [20, 15, 26, 8, 4]
+result = lst[-1:] + lst[:-1]
+print(result)

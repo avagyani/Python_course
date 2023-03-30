@@ -13,6 +13,5 @@ Examples
 my_list = [4, 5, 7, 1, 2, 9, 10]
 s = input("Type 'Asc' or 'Des' or 'None' ->  ")
 result = sorted(my_list, reverse = s == "Des")
-# print(result)
 y = my_list * (s == "None")
 print(y or result)

@@ -24,8 +24,8 @@ Examples
 
 # version_3
 
-def list_of_multiples(num, length):
-    lst = [num] * length
-    lst[0:] = [num * (i+1) for i in range(length)]
-    return lst
-print(list_of_multiples(17, 6))
+# def list_of_multiples(num, length):
+#     lst = [num] * length
+#     lst[0:] = [num * (i+1) for i in range(length)]
+#     return lst
+# print(list_of_multiples(17, 6))

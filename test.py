@@ -21,3 +21,13 @@
 #                                           "too late") + ((age < 20 or age > 40) * "try again")
 # print(result)
 
+
+# x = input()
+# lst = x.split()
+# n = len(lst)
+# while n > 0:
+#     lst[n - 1] = int(lst[n - 1])
+#     n = n - 1
+# print(lst)
+
+
