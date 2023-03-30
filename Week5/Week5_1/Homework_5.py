@@ -12,7 +12,6 @@ count_unique('apple', 'play') ➞ 5
 
 str_1 = input()
 str_2 = input()
-str_3 = "".join([str_1, str_2])
-letters = set(str_3)
+letters = set(str_1 + str_2)
 result = len(letters)
 print(result)

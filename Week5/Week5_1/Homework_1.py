@@ -8,8 +8,14 @@ Examples
 
 
 
+# version_1
+# lst = [20, 15, 26, 8, 4]
+# lst_1= lst[:4]
+# lst_2 = lst[4:]
+# lst_2.extend(lst_1)
+# print(lst_2)
+
 lst = [20, 15, 26, 8, 4]
-lst_1= lst[:4]
-lst_2 = lst[4:]
-lst_2.extend(lst_1)
-print(lst_2)
+a = lst.pop(4)
+lst.insert(0, a)
+print(lst)

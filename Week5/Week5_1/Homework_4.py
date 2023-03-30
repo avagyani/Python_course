@@ -10,5 +10,5 @@ unique_sort([6, 7, 3, 2, 1]) ➞ [1, 2, 3, 6, 7]"""
 
 
 lst = [1, 4, 4, 4, 4, 4, 3, 2, 1, 2]
-result = set(list(lst))
+result = set(lst)
 print(result)
