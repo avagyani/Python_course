@@ -11,14 +11,21 @@ In order to work properly, the function should replace all 'a's with 4,
 
 
 
-speak = input("Enter some text -> ")
 
-for i in speak:
-    speak = speak.replace("a", "4")
-    speak = speak.replace("e", "3")
-    speak = speak.replace("i", "1")
-    speak = speak.replace("o", "0")
-    speak = speak.replace("s", "5")
+d = {'a': '4',
+     'e': '3',
+     'i': '1',
+     'o': '0',
+     's': '5'}
 
-print(speak)
-    
+my_string = input("Enter a string -> ")
+new_string = ""
+
+for i in my_string:
+    rep = d.get(i)
+    if rep:
+        new_string += rep
+    else:
+        new_string += i
+
+print(new_string)

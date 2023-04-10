@@ -14,14 +14,37 @@ Single-digit numbers are trivially palindrome numbers."""
 
 
 
+#version_1
+# a = int(input("Enter the first number -> "))
+# b = int(input("Enter the second number -> "))
+# palindrome = []
+
+# for i in range(a, b + 1):
+#     if str(i) == str(i)[::-1]:
+#         palindrome.append(i)
+
+# palindrome_count = len(palindrome)
+
+# print(palindrome_count)
+
+
+
+#version_2
 a = int(input("Enter the first number -> "))
 b = int(input("Enter the second number -> "))
-palindrome = []
+
+count = 0
 
 for i in range(a, b + 1):
-    if str(i) == str(i)[::-1]:
-        palindrome.append(i)
+    current = str(i)
+    odd = 0
+    
+    if len(current) % 2 != 0:
+        odd = 1
+    start = current[:len(current) // 2]
+    end = current[len(current) // 2 + odd:][::-1]
+    
+    if start == end:
+        count += 1
 
-palindrome_count = len(palindrome)
-
-print(palindrome_count)
+print(count)

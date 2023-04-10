@@ -13,16 +13,16 @@ Define a separate is_vowel() function for easier to read code (recommendation).
 
 
 my_str = input("Enter a string -> ")
-my_lst_1 = []
-my_lst_2 = []
-is_vowel = ['a', 'e', 'i', 'o', 'u']
+my_str_1 = ""
+my_str_2 = ""
+is_vowel = "aeiou"
 
 for i in my_str:
     if i in is_vowel:
-        my_lst_1.append(i)
+        my_str_1 += i
     else:
-        my_lst_2.append(i)    
+        my_str_2 += i  
     
-result = "".join(my_lst_1) + "".join(my_lst_2)
+result = my_str_1 + my_str_2
 
 print(result)
