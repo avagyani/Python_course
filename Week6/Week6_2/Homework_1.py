@@ -7,6 +7,7 @@ say_hello_bye('jose', 0) ➞ 'Bye Jose'"""
 
 
 
+# version_1
 say_hello_bye = ('jose', 0)
 
 name = say_hello_bye[0].capitalize()
@@ -19,3 +20,17 @@ if (say_hello_bye[1] == 1) or (say_hello_bye[1] == 0):
         print("Bye" + " " + name)
 else:
     print("Number is incorrect")
+
+
+
+# version_2
+input_tuple = ("alon", 1)
+
+name, logic = input_tuple
+
+if logic:
+    result = f'Hello {name.capitalize()}'
+else:
+    result = f'Bye {name.capitalize()}'
+
+print(result)

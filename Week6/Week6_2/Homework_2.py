@@ -10,6 +10,7 @@ test_jackpot(['SS', 'SS', 'SS', 'Ss']) ➞ False"""
 
 
 
+#version_1
 test_jackpot = ['SS', 'SS', 'SS', 'Ss']
 
 if len(test_jackpot) != 4:
@@ -20,3 +21,16 @@ else:
         print(True)
     else:
         print(False)
+
+
+
+#version_2
+test_jackpot = ['SS', 'SS', 'SS', 'Ss']
+
+new_set = set(test_jackpot)
+result = False
+
+if len(new_set) == 1:
+    result = True
+    
+print(result)
