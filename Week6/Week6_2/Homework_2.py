@@ -1,0 +1,22 @@
+"""Create a function that takes a list (slot machine outcome) and returns 
+True if all elements in the list are identical, and False otherwise. 
+The list will contain 4 elements.
+Examples
+test_jackpot(['@', '@', '@', '@']) ➞ True
+test_jackpot(['abc', 'abc', 'abc', 'abc']) ➞ True
+test_jackpot(['SS', 'SS', 'SS', 'SS']) ➞ True
+test_jackpot(['&&', '&', '&&&', '&&&&']) ➞ False
+test_jackpot(['SS', 'SS', 'SS', 'Ss']) ➞ False"""
+
+
+
+test_jackpot = ['SS', 'SS', 'SS', 'Ss']
+
+if len(test_jackpot) != 4:
+    print("The list will contain 4 elements")
+
+else:
+    if test_jackpot[0] == test_jackpot[1] == test_jackpot[2] == test_jackpot[3]:
+        print(True)
+    else:
+        print(False)
