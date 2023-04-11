@@ -18,6 +18,7 @@ You can assume all input seqeuences will be valid."""
 
 
 
+#version_1
 rna = input("Enter your RNA -> ")
 compl = []
 
@@ -35,3 +36,22 @@ for i in rna:
 reverse_complement = "".join(compl[::-1])
 
 print(reverse_complement)
+
+
+
+#version_2
+rna = input("Enter your RNA -> ")
+compl = ""
+d = {
+    "A": "U",
+    "U": "A",
+    "G": "C",
+    "C": "G"
+}
+
+for i in rna:
+    rep = d.get(i)
+    compl += rep
+
+result = compl[::-1]
+print(result)
