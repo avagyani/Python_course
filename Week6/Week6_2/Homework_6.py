@@ -12,17 +12,35 @@ Define a separate is_vowel() function for easier to read code (recommendation).
 
 
 
-my_str = input("Enter a string -> ")
-my_str_1 = ""
-my_str_2 = ""
-is_vowel = "aeiou"
+#version_1
+# my_str = input("Enter a string -> ")
+# my_str_1 = ""
+# my_str_2 = ""
+# is_vowel = "aeiou"
 
-for i in my_str:
-    if i in is_vowel:
-        my_str_1 += i
-    else:
-        my_str_2 += i  
+# for i in my_str:
+#     if i in is_vowel:
+#         my_str_1 += i
+#     else:
+#         my_str_2 += i  
     
-result = my_str_1 + my_str_2
+# result = my_str_1 + my_str_2
 
-print(result)
+# print(result)
+
+#version_2
+def split(text:str):
+    lst_1 = []
+    lst_2 = []
+    for i in text:
+        if is_vowel(i):
+            lst_1.append(i)
+        else:
+            lst_2.append(i)
+    return ''.join(lst_1 + lst_2)
+    
+def is_vowel(i):
+    return i.lower() in "aeiou"
+
+
+print(split("What's the time?"))

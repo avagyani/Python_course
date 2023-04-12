@@ -11,21 +11,30 @@ In order to work properly, the function should replace all 'a's with 4,
 
 
 
+#version_1
+# d = {'a': '4',
+#      'e': '3',
+#      'i': '1',
+#      'o': '0',
+#      's': '5'}
 
-d = {'a': '4',
-     'e': '3',
-     'i': '1',
-     'o': '0',
-     's': '5'}
+# my_string = input("Enter a string -> ")
+# new_string = ""
 
-my_string = input("Enter a string -> ")
-new_string = ""
+# for i in my_string:
+#     rep = d.get(i)
+#     if rep:
+#         new_string += rep
+#     else:
+#         new_string += i
 
-for i in my_string:
-    rep = d.get(i)
-    if rep:
-        new_string += rep
-    else:
-        new_string += i
+# print(new_string)
 
-print(new_string)
+
+
+#version_2
+def hacker_speak(text:str):
+    result = text.replace("a", "4").replace("e", "3").replace("i", "1").replace("o", "0").replace("s", "5")
+    return result
+
+print(hacker_speak("become a coder"))

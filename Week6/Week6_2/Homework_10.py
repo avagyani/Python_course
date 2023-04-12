@@ -19,39 +19,54 @@ You can assume all input seqeuences will be valid."""
 
 
 #version_1
-rna = input("Enter your RNA -> ")
-compl = []
+# rna = input("Enter your RNA -> ")
+# compl = []
 
-for i in rna:
+# for i in rna:
 
-    if i == "A":
-        compl.append("U")
-    elif i == "C":
-        compl.append("G")
-    elif i == "U":
-        compl.append("A")
-    elif i == "G":
-        compl.append("C")
+#     if i == "A":
+#         compl.append("U")
+#     elif i == "C":
+#         compl.append("G")
+#     elif i == "U":
+#         compl.append("A")
+#     elif i == "G":
+#         compl.append("C")
 
-reverse_complement = "".join(compl[::-1])
+# reverse_complement = "".join(compl[::-1])
 
-print(reverse_complement)
+# print(reverse_complement)
 
 
 
 #version_2
-rna = input("Enter your RNA -> ")
-compl = ""
-d = {
-    "A": "U",
-    "U": "A",
-    "G": "C",
-    "C": "G"
-}
+# rna = input("Enter your RNA -> ")
+# compl = ""
+# d = {
+#     "A": "U",
+#     "U": "A",
+#     "G": "C",
+#     "C": "G"
+# }
 
-for i in rna:
-    rep = d.get(i)
-    compl += rep
+# for i in rna:
+#     rep = d.get(i)
+#     compl += rep
 
-result = compl[::-1]
-print(result)
+# result = compl[::-1]
+# print(result)
+
+
+#version_3
+
+
+def rna_f(rna):
+    d = {"A": "U", "U": "A", "G": "C", "C": "G"}
+    res = ""
+    for i in rna:
+        rep = d.get(i)
+        res += rep
+    result = res[::-1]
+    return result
+        
+print(rna_f("CAGGU"))

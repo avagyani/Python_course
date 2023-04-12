@@ -10,20 +10,42 @@ return_end_of_number(412) ➞ ՛412-TH՛"""
 
 
 
-num = int(input("Enter a number -> "))
-result = str(num)
+#version_1
+# num = int(input("Enter a number -> "))
+# result = str(num)
 
-if result[-2] != '1':
-    if result[-1] == '1':
-        result += "-ST"
-    elif result[-1] == '2':
-        result += "-ND"
-    elif result[-1] == '3':
-        result += "-RD"
+# if result[-2] != '1':
+#     if result[-1] == '1':
+#         result += "-ST"
+#     elif result[-1] == '2':
+#         result += "-ND"
+#     elif result[-1] == '3':
+#         result += "-RD"
+#     else:
+#         result += "-TH"
+# else:
+#     result += "-TH"
+
+# print(result)
+
+
+
+#version_2
+def return_end_of_number(num):
+    
+    if len(str(num)) > 1 and str(num)[-2] != "1":
+        
+        if str(num)[-1] == '1':
+            result = str(num) + "-ST"
+        elif str(num)[-1] == '2':
+            result = str(num) + "-ND"
+        elif str(num)[-1] == '3':
+            result = str(num) + "-RD"
+        else:
+            result = str(num) + "-TH"
     else:
-        result += "-TH"
-else:
-    result += "-TH"
+        result = str(num) + "-TH"
+    
+    return result
 
-print(result)
-
+print(return_end_of_number(121))

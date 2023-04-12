@@ -21,22 +21,48 @@ arithmetic operator."""
 
 
 
-arithmetic_operation = ('12 // 0')
-lst_operator = arithmetic_operation.strip()
-lst_operator = lst_operator.split()
+#version_1
+# arithmetic_operation = ('12 // 0')
+# lst_operator = arithmetic_operation.strip()
+# lst_operator = lst_operator.split()
 
-if lst_operator[1] == "//" and lst_operator[2] == "0":
-    result = -1
-else:
-    if lst_operator[1] == "+":
-        result = int(lst_operator[0]) + int(lst_operator[2])
-    elif lst_operator[1] == "-":
-        result = int(lst_operator[0]) - int(lst_operator[2])
-    elif lst_operator[1] == "*":
-        result = int(lst_operator[0]) * int(lst_operator[2])
-    elif lst_operator[1] == "//":
-        result = int(lst_operator[0]) // int(lst_operator[2])
+# if lst_operator[1] == "//" and lst_operator[2] == "0":
+#     result = -1
+# else:
+#     if lst_operator[1] == "+":
+#         result = int(lst_operator[0]) + int(lst_operator[2])
+#     elif lst_operator[1] == "-":
+#         result = int(lst_operator[0]) - int(lst_operator[2])
+#     elif lst_operator[1] == "*":
+#         result = int(lst_operator[0]) * int(lst_operator[2])
+#     elif lst_operator[1] == "//":
+#         result = int(lst_operator[0]) // int(lst_operator[2])
+#     else:
+#         result = "invalid operation"
+
+# print(result)
+
+
+
+
+#version_2
+def arithmetic_operation(a: int, b: str, c: int):
+    if b == "+":
+        return a + c
+    elif b == "-":
+        return a - c
+    elif b == "*":
+        return a * c
+    elif b == "/" or b == "//":
+        if c == 0:
+            return -1
+        else:
+            return a // c
     else:
-        result = "invalid operation"
+        print("Invalid operation")
+
+
+
+result = arithmetic_operation(12, "//", 2)
 
 print(result)

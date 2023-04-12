@@ -30,21 +30,39 @@ Single-digit numbers are trivially palindrome numbers."""
 
 
 #version_2
-a = int(input("Enter the first number -> "))
-b = int(input("Enter the second number -> "))
+# a = int(input("Enter the first number -> "))
+# b = int(input("Enter the second number -> "))
 
-count = 0
+# count = 0
 
-for i in range(a, b + 1):
-    current = str(i)
-    odd = 0
+# for i in range(a, b + 1):
+#     current = str(i)
+#     odd = 0
     
-    if len(current) % 2 != 0:
-        odd = 1
-    start = current[:len(current) // 2]
-    end = current[len(current) // 2 + odd:][::-1]
+#     if len(current) % 2 != 0:
+#         odd = 1
+#     start = current[:len(current) // 2]
+#     end = current[len(current) // 2 + odd:][::-1]
     
-    if start == end:
-        count += 1
+#     if start == end:
+#         count += 1
 
-print(count)
+# print(count)
+
+
+
+#version_3
+def count_palindromes(a: int, b: int):
+    count = 0
+    for i in range(a, b + 1):
+        current = str(i)
+        odd = 0
+        if len(current) % 2 != 0:
+            odd = 1
+        start = current[:len(current) // 2]
+        end = current[len(current) // 2 + odd:][::-1]
+        if start == end:
+            count += 1
+    return count
+
+print(count_palindromes(878, 898))

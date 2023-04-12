@@ -15,31 +15,45 @@ Return True for the edge case of an empty array of hurdles.
 
 
 # version_1
-hurdle_jump = ([5, 5, 3, 4, 5], 3)
+# hurdle_jump = ([5, 5, 3, 4, 5], 3)
 
-hurdle_heights = hurdle_jump[0]
-jump_height = hurdle_jump[1]
+# hurdle_heights = hurdle_jump[0]
+# jump_height = hurdle_jump[1]
 
-if hurdle_heights == []:
-    result = True
-else:
-    result = max(hurdle_heights) <= jump_height
+# if hurdle_heights == []:
+#     result = True
+# else:
+#     result = max(hurdle_heights) <= jump_height
 
-print(result)
+# print(result)
 
 
 
 #version_2
-hurdle_jump = ([1, 2, 3, 4, 5], 5)
+# hurdle_jump = ([1, 2, 3, 4, 5], 5)
 
-hurdle, jump = hurdle_jump
+# hurdle, jump = hurdle_jump
 
-result = False
+# result = False
 
-if hurdle:
-    if max(hurdle) <= jump:
+# if hurdle:
+#     if max(hurdle) <= jump:
+#         result = True
+# else:
+#     result = True
+
+# print(result)
+
+
+
+#version_3
+def hurdle_jump(hundle: list, jump: int):
+    result = False
+    if hundle != []:
+        if max(hundle) <= jump:
+            result = True
+    else:
         result = True
-else:
-    result = True
+    return result
 
-print(result)
+print(hurdle_jump([1, 2, 1], 1))

@@ -13,28 +13,41 @@ with remainder 0."""
 
 
 #version_1
-num = int(input("Enter a number, please -> "))
-factorize = []
+# num = int(input("Enter a number, please -> "))
+# factorize = []
 
-while num < 0:
-    num = int(input("Enter a positive number, please -> "))
+# while num < 0:
+#     num = int(input("Enter a positive number, please -> "))
 
-for i in range(1, num + 1):
-    if num % i == 0:
-        factorize.append(i)
+# for i in range(1, num + 1):
+#     if num % i == 0:
+#         factorize.append(i)
 
-print(factorize)
+# print(factorize)
 
 
 
 #version_2
-num = 12
-result = []
+# num = 12
+# result = []
 
-for i in range(1, num//2 + 1):     #որպեսզի շատ թվերի համար էդքան շատ չաշխատի
-    if num % i == 0:
-        result.append(i)
+# for i in range(1, num//2 + 1):     #որպեսզի շատ թվերի համար էդքան շատ չաշխատի
+#     if num % i == 0:
+#         result.append(i)
 
-result.append(num)
+# result.append(num)
 
-print(result)
+# print(result)
+
+
+
+#version_3
+def factorize(num: int):
+    result = []
+    for i in range(1, num // 2 + 1):
+        if num % i == 0:
+            result.append(i)
+    result.append(num)
+    return result
+
+print(factorize(12))

@@ -11,26 +11,34 @@ test_jackpot(['SS', 'SS', 'SS', 'Ss']) ➞ False"""
 
 
 #version_1
-test_jackpot = ['SS', 'SS', 'SS', 'Ss']
+# test_jackpot = ['SS', 'SS', 'SS', 'Ss']
 
-if len(test_jackpot) != 4:
-    print("The list will contain 4 elements")
+# if len(test_jackpot) != 4:
+#     print("The list will contain 4 elements")
 
-else:
-    if test_jackpot[0] == test_jackpot[1] == test_jackpot[2] == test_jackpot[3]:
-        print(True)
-    else:
-        print(False)
+# else:
+#     if test_jackpot[0] == test_jackpot[1] == test_jackpot[2] == test_jackpot[3]:
+#         print(True)
+#     else:
+#         print(False)
 
 
 
 #version_2
-test_jackpot = ['SS', 'SS', 'SS', 'Ss']
+# test_jackpot = ['SS', 'SS', 'SS', 'Ss']
 
-new_set = set(test_jackpot)
-result = False
+# new_set = set(test_jackpot)
+# result = False
 
-if len(new_set) == 1:
-    result = True
+# if len(new_set) == 1:
+#     result = True
     
-print(result)
+# print(result)
+
+
+
+#version_3
+def test_jackpot(a: list):
+    return len(set(a)) == 1
+
+print(test_jackpot(['SS', 'SS', 'SS', 'Ss']))
